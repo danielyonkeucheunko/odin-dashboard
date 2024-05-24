@@ -1,0 +1,143 @@
+:root {
+    --main-color: red;
+    --secondary-color: lightgray;
+    --text-color: white;
+
+    font-family: Roboto;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+    height: 100vh;
+    width: 100vw;
+}
+/* Sidebar */
+.sidebar {
+    background-color: var(--main-color);
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 600;
+    display: grid;
+    grid-template-rows: 1fr 4fr 4fr;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.dashboard {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: grid;
+}
+
+/* Header */
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.user-info {
+    display: flex;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+}
+
+.user-hello {
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.pfp {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+.user-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: end;
+}
+
+.user-button {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+}
+
+.misc {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+}
+
+input[type="search"] {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+}
+input[type="search"]:focus {
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+.user-info-2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: end;
+}
+
+.pfp-2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.username-2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Main Content */
+
+.main-content {
+    background-color: var(--secondary-color);
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
