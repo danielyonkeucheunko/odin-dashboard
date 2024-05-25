@@ -1,7 +1,9 @@
 :root {
-    --main-color: red;
-    --secondary-color: lightgray;
+    --main-color: rgb(228, 61, 61);
+    --secondary-color: rgb(233, 233, 233);
     --text-color: white;
+    --card-color: rgb(255, 70, 70);
+    --card-text-color: rgb(158, 158, 158);
 
     font-family: Roboto;
 }
@@ -127,6 +129,7 @@ input[type="search"]:focus {
     width: 50px;
     height: 50px;
     border-radius: 50px;
+    object-fit: cover;
 }
 
 .username-2 {
@@ -140,4 +143,95 @@ input[type="search"]:focus {
     background-color: var(--secondary-color);
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template: 2fr 2fr / 3fr 1fr;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+}
+
+.projects {
+    grid-row: 1 /3;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements {
+    grid-row: 1 /2;
+    display: flex;
+    flex-direction: column;
+}
+
+.trending {
+    grid-row: 2/ 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px 20px;
+}
+
+.project-card {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    height: 200px;
+    border-left: 7px solid var(--card-color);
+    padding: 20px;
+}
+
+.project-card-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.project-card-desc {
+    color: var(--card-text-color);
+}
+
+.announcement-card {
+    background-color: white;
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: var(--card-text-color);
+}
+
+.announcement-card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.announcement-card-desc {
+    font-size: 13px;
+}
+
+.trending-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.trending-user-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.trending-user-desc {
+    color: var(--card-text-color);
 }
