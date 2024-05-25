@@ -1,11 +1,13 @@
 :root {
-    --main-color: rgb(228, 61, 61);
-    --secondary-color: rgb(233, 233, 233);
+    --main-color: #9333ea;
+    --secondary-color: #e2e8f0;
     --text-color: white;
-    --card-color: rgb(255, 70, 70);
-    --card-text-color: rgb(158, 158, 158);
+    --card-color: #a855f7;
+    --card-text-color: #475569;
 
-    font-family: Roboto;
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
 }
 
 .container {
@@ -31,6 +33,11 @@
 .dashboard {
     font-size: 40px;
     font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
 }
 
 ul {
@@ -41,8 +48,40 @@ ul {
 
 .menu {
     display: grid;
+    padding-left: 30px;
 }
 
+.dashboard-icon {
+    width: 4rem;
+    filter: invert(99%) sepia(82%) saturate(0%) hue-rotate(250deg)
+        brightness(110%) contrast(100%);
+}
+
+.side-icon {
+    width: 2rem;
+    filter: invert(99%) sepia(82%) saturate(0%) hue-rotate(250deg)
+        brightness(110%) contrast(100%);
+}
+
+.side-icon-inverted {
+    width: 2rem;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%)
+        contrast(104%);
+}
+
+.side-item {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.icons {
+    padding-top: 10px;
+    align-self: flex-end;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
 /* Header */
 
 .header {
@@ -52,6 +91,8 @@ ul {
     grid-template-rows: repeat(2, 1fr);
     padding-left: 40px;
     padding-right: 40px;
+    z-index: 1;
+    box-shadow: 2px -1px 6px black;
 }
 
 .user {
@@ -177,7 +218,7 @@ input[type="search"]:focus {
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px 20px;
 }
 
@@ -188,6 +229,9 @@ input[type="search"]:focus {
     height: 200px;
     border-left: 7px solid var(--card-color);
     padding: 20px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.315);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card-title {
@@ -205,6 +249,7 @@ input[type="search"]:focus {
     font-size: 15px;
     border-radius: 10px;
     color: var(--card-text-color);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.315);
 }
 
 .announcement-card-title {
@@ -223,6 +268,7 @@ input[type="search"]:focus {
     border-radius: 10px;
     display: grid;
     gap: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.315);
 }
 
 .trending-user-card {
